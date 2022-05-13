@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+    color: #fff;
+    background-color: #151819;
+}
+
+@font-face {
+    font-family: 'Cal Sans';
+    src: url(../public/font/CalSans-SemiBold.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 1) 300px
+    ),
+    fixed 0 0 / 20px 20px radial-gradient(#d1d1d1 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(#d1d1d1 1px, transparent 0);
+}
+
+aside {
+    background: transparent !important;
+}
+
+.sidebar li.active>a {
+    background-color: hsl(212deg 100% 97%/1);
+    color: hsl(212deg 100% 50%/1);
+
+    font-weight: 700;
+}
+
+.dark .sidebar li.active>a {
+    background-color: hsl(204deg 100% 50%/0.1);
+    color: hsl(204deg 100% 50%/1);
+
+    font-weight: 700;
+}
+
+.light body {
+    color-scheme: light;
+}
+
+.dark body {
+    color-scheme: dark;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #111 300px),
+    fixed 0 0 / 20px 20px radial-gradient(#313131 1px, transparent 0),
+    fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
+}
+
+a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.font-cal {
+    font-family: 'Cal Sans', sans-serif;
+}
+
+.grid-bg {
+    background-image: url(https://cal.com/grid-sprite.svg);
+
+    background-position: top;
+    background-size: 2449px;
+    background-repeat: repeat;
+}
+
+.external:after {
+    transition: all;
+    transition-duration: 500ms;
+    text-decoration: none;
+    content: " \00A0 \2197"
+}
+
+.internal:after {
+    transition: all;
+    transition-duration: 500ms;
+    text-decoration: none;
+    content: " \00A0 \2192"
+}
+
+.internal:hover:after {
+    transition: all;
+    transition-duration: 200ms;
+    margin-left: 0.2rem;
+}
+
+.external:hover:after {
+    transition: all;
+    transition-duration: 200ms;
+    margin-left: 0.2rem;
+}
+
+.title-container > h1 {
+    position: relative;
+    display: block;
+    transform: translateY(6rem);
+    animation: up 500ms ease forwards; /*add bezier curve*/
+    z-index: 1;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 1);
+}
+
+.title-container > h1::before,
+.title-container > h1::after {
+    position: absolute;
+    content: '';
+    width: 0px;
+    height: 1px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.title-container > h1::before {
+    top: 0.9rem;
+    animation: draw 500ms linear 1s forwards;
+}
+
+.title-container > h1::after {
+    bottom: 0.3rem;
+    animation: draw 500ms linear 1s forwards;
+}
+
+.title-container {
+    font-size: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
+}
+
+@keyframes up {
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes draw {
+
+    100% {
+        width: 100%;
+    }
+
+}
+
+.animate-underline {
+    background-size: 100% 0.07em, 0 0.07em;
+    background: linear-gradient(to right, rgba(156, 163, 175, 0.3), rgba(156, 163, 175, 0.3)), linear-gradient(to right, rgba(34, 34, 35, 1), rgba(34, 34, 35, 1)) no-repeat 100% 100%, 0 100%;
+    transition: background-size 400ms;
+}
+
+.animate-underline:hover,
+.animate-underline:focus {
+    background-size: 0 0.1em, 100% 0.1em;
+}
