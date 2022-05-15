@@ -61,9 +61,15 @@ aside {
 a {
     font-weight: 600;
     text-decoration: none;
+    transition: color 250ms;
 }
 
-.font-cal {
+a:hover {
+    color: black;
+
+}
+
+h1, .font-cal {
     font-family: 'Cal Sans', sans-serif;
 }
 
