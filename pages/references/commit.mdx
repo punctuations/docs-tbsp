@@ -2,4 +2,30 @@ import {Page} from "../../components/page"
 
 <Page/>
 
-Placeholder
+# Creating Commits
+The commit command generates a commit message, then commits it.
+
+This command has five possible flags to use:
+- `--full` (`-f`): full length commit description, showing all files changed.
+- `--unstaged` (`-u`): generate a commit message for unstaged files, then commit it.
+- `--no-comment` (`-n`): prompts the user for a short description instead of using comments.
+- `--select` (`-s`): allows user to choose the file to showcase in the short commit message.
+- `--co-author` (`-c`): adds a co-author to the commit.
+
+## Full commit message
+input:
+`tablespoon commit -f`
+
+output:
+```
+feat(cmd/generate.go): overhaul to foobar
+
+
+- cmd/generate.go - 8 changes
+- README.md - 3 changes
+
+Authored-by: matt <matt@dont-ping.me>
+```
+
+## Unstaged commit
+
