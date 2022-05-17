@@ -2,18 +2,18 @@ import {Page} from "../../components/page"
 
 <Page/>
 
-# Creating Commits
-The commit command generates a commit message, then commits it.
+# Generating messages
+The generate command generates a commit message, but **does not commit it**.
 
 This command has five possible flags to use:
 - `--full` (`-f`): full length commit description, showing all files changed.
-- `--unstaged` (`-u`): generate a commit message for unstaged files, then commit it.
+- `--unstaged` (`-u`): generate a commit message for unstaged files.
 - `--no-comment` (`-n`): prompts the user for a short description instead of using comments.
 - `--select` (`-s`): allows user to choose the file to showcase in the short commit message.
-- `--co-author` (`-c`): adds a co-author to the commit.
+- `--co-author` (`-c`): adds a co-author to the message.
 
-## Full commit message
-`tablespoon commit --full`
+## Full generated message
+`tablespoon generate --full`
 
 ```
 ✔ feat
@@ -26,42 +26,42 @@ feat(cmd/generate.go): overhaul to foobar
 Authored-by: matt <matt@dont-ping.me>
 ```
 
-## Unstaged commit
-`tablespoon commit --unstaged`
+## Unstaged generated message
+`tablespoon generate --unstaged`
 
 ```
 ✔ feat
 feat(cmd/generate.go): overhaul to foobar
 ```
 
-## No-comment commit
-`tablespoon commit --no-comment`
+## No-comment generated message
+`tablespoon generate --no-comment`
 
 ```
 ✔ feat
-What was changed in references/commit.mdx?: example comment
-feat(references/commit.mdx): example comment
+What was changed in references/generate.mdx?: example comment
+feat(references/generate.mdx): example comment
 ```
 
-## Select commit
-`tablespoon commit --select=README.md`
+## Select generated message
+`tablespoon generate --select=README.md`
 
 ```
 ✔ feat
 docs(README.md): add better documentation
 ```
 
-## Co-author commit
+## Co-author generated message
 co-author requires the `--full` flag to work properly.
 
-`tablespoon commit --co-author=punctuations --full`
+`tablespoon generate --co-author=punctuations --full`
 
 ```
 ✔ feat
-feat(cmd/commit.go): example comment
+feat(cmd/generate.go): example comment
 
 
-- cmd/commit.go - 9 changes
+- cmd/generate.go - 9 changes
 
 Authored-by: matt <matt@dont-ping.me>
 

@@ -1,3 +1,32 @@
 import {Page} from "../../components/page"
 
 <Page/>
+
+# Adding an alias
+
+Typically, the command of `tablespoon` is too long and inconvenient to type out each time, to fix this you can have a custom alias.
+
+After installing the cli a new PATH env should be added to your rc file for your specific shell environment, below this line the following should be added:
+
+```
+...
+
+export PATH="$PATH:/Users/name/.local/bin" # < -- auto-generated
+
+# default alias is "tbsp"
+eval $(tablespoon alias --disable-update-checks) # < -- this line
+```
+however, this should be added according to your shell env
+
+## Custom alias
+
+For a custom alias you can use the flag `--shorthand` to pass in the new alias you want to use for the program.
+
+```
+...
+
+export PATH=="$PATH:/Users/name/.local/bin" # < -- auto-generated
+
+# alias will be "coffee"
+eval $(tablespoon alias --shorthand=coffee --disable-update-checks) # < -- this line
+```

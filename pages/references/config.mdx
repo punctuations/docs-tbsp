@@ -1,0 +1,33 @@
+import {Page} from "../../components/page"
+
+<Page/>
+
+# Configurations
+
+As it goes for configurations for tablespoon there are two different usages.
+
+## Config file
+The config file contains customization options for tablespoon, the file can be named either "tablespoon.json", or "tbsp.json".
+
+Example config file:
+```json
+{
+  "commentID": "!#: ",
+  "extend": {
+    "types": ["cleanup"]
+  },
+  "cleanup": false,
+  "confirmationPrompt": true,
+  "ignored": ["whiteboard.md"]
+}
+```
+
+- `commentID`: The comment ID is the ID used to differentiate a normal comment and a tbsp comment.
+- `extend.types`: extend.types is used to extend the possible types you can use in tablespoon.
+- `cleanup`: Cleanup is a setting which will delete tbsp comments after it is detected through tablespoon.
+- `confirmationPrompt`: Prompt confirmation is used for the confirmation prompt that appears when the commit command is run.
+- `ignored`: Ignored setting is for files that aren't ignored by the `.gitignore` file but shouldn't be included in tablespoon, like a TODO file.
+
+## Config command
+
+The config command will print out the config file once it is located, used for debugging purposes.
