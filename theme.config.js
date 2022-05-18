@@ -18,20 +18,17 @@ export default {
       <meta httpEquiv="Content-Language" content="en" />
       <meta
         name="description"
-        content="Tbsp: a cli tool to generate semantic commit messages."
+        content="A cli tool to generate semantic commit messages."
       />
       <meta
         name="og:description"
-        content="Tbsp: a cli tool to generate semantic commit messages."
+        content="A cli tool to generate semantic commit messages."
       />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content="https://tbsp.coffee/terminal.png" />
       <meta name="twitter:site:domain" content="docs.tbsp.coffee" />
       <meta name="twitter:url" content="https://docs.tbsp.coffee" />
-      <meta
-        name="og:title"
-        content="Tbsp: a cli tool to generate semantic commit messages."
-      />
+      <meta name="og:title" content="Tablespoon documentation" />
       <meta name="og:image" content="https://tbsp.coffee/terminal.png" />
       <meta name="apple-mobile-web-app-title" content="Tablespoon" />
       <link rel="icon" href="/favicon.ico" />
