@@ -29,7 +29,7 @@ export default {
       <meta name="twitter:site:domain" content="docs.tbsp.coffee" />
       <meta name="twitter:url" content="https://docs.tbsp.coffee" />
       <meta name="og:title" content="Tablespoon documentation" />
-      <meta name="og:image" content="https://tbsp.coffee/terminal.png" />
+      <meta name="og:image" content="/og.png" />
       <meta name="apple-mobile-web-app-title" content="Tablespoon" />
       <link rel="icon" href="/favicon.ico" />
     </>
