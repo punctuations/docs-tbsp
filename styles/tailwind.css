@@ -29,8 +29,10 @@ body {
     fixed 40px 40px / 60px 60px linear-gradient(#9ca3af40 1px, transparent 0);
 }
 
-aside {
-    background: transparent !important;
+@media (min-width: 1024px) {
+    aside {
+        background: transparent !important;
+    }
 }
 
 .sidebar li.active>a {
