@@ -10,3 +10,6 @@ packages
 # Editors
 .idea
 .code
+
+# Vercel
+.vercel
