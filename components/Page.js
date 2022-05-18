@@ -5,7 +5,7 @@ import meta_sub from '../pages/references/meta.json'
 
 const meta = { root: meta_root, sub: meta_sub }
 
-export const Page = () => {
+const Page = () => {
   const router = useRouter()
 
   let locale = router.pathname.substring(1)
@@ -41,3 +41,5 @@ export const Page = () => {
 
   return metaized
 }
+
+export default Page
