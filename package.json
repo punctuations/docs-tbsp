@@ -11,7 +11,7 @@
   "author": "Shu Ding",
   "license": "MIT",
   "dependencies": {
-    "next": "^12.1.0",
+    "next": "^13.5.0",
     "nextra": "^2.0.0-alpha.50",
     "nextra-theme-docs": "^2.0.0-alpha.53",
     "react": "^17.0.2",
